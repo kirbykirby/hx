@@ -40,7 +40,7 @@ public class BlockCanvas extends BlockContainer{
 	
 	public Icon getBlockTextureFromSideAndMetadata(int par1, int par2)
     {
-        return Block.cloth.getBlockTextureFromSideAndMetadata(par1, 0);
+        return Block.cloth.getIcon(par1, 0);
     }
 
 	public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)

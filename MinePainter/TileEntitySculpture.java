@@ -27,6 +27,7 @@ import net.minecraft.world.EnumSkyBlock;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.ForgeDirection;
 
 public class TileEntitySculpture extends TileEntity implements IBlockAccess{
 
@@ -695,5 +696,12 @@ public class TileEntitySculpture extends TileEntity implements IBlockAccess{
 //				Debug.dafuq(hinge);
 			}
 		}
+	}
+
+	@Override
+	public boolean isBlockSolidOnSide(int x, int y, int z, ForgeDirection side,
+			boolean _default) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

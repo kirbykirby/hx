@@ -18,9 +18,11 @@ public class ItemHinge extends Item{
 		setUnlocalizedName("itemHinge");
 	}
 	
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("stick");
+        this.itemIcon = par1IconRegister.registerIcon("stick");
     }
 	
 	@SideOnly(Side.CLIENT)

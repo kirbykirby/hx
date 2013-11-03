@@ -17,8 +17,10 @@ public class ItemIronChisel extends Item{
 	}
 	
 
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("MinePainter:iron_chisel");
+        this.itemIcon = par1IconRegister.registerIcon("MinePainter:iron_chisel");
     }
 }

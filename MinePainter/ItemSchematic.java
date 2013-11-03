@@ -24,9 +24,11 @@ public class ItemSchematic extends Item{
 		this.setMaxStackSize(1);
 	}
 	
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("paper");
+        this.itemIcon = par1IconRegister.registerIcon("paper");
     }
 
 	@SideOnly(Side.CLIENT)

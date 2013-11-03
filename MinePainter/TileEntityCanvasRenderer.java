@@ -11,6 +11,8 @@ import cpw.mods.fml.client.FMLClientHandler;
 
 import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -113,8 +115,10 @@ public class TileEntityCanvasRenderer extends TileEntitySpecialRenderer
 		
 		brightness = entity.getBlockType().getMixedBrightnessForBlock(entity.worldObj, entity.xCoord,entity.yCoord,entity.zCoord);
 		
-		bindTextureByName("/terrain.png");
-		
+		TextureManager re = RenderManager.instance.renderEngine; 
+
+	//	bindTextureByName("/terrain.png");
+		re.func_110577_a(re.func_130087_a(0));
 		GL11.glPushMatrix();
         GL11.glTranslated(x + 0.5d, y + 0.5d, z + 0.5d);
         GL11.glRotatef(180, 1, 0, 0);

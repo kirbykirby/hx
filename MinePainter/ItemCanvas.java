@@ -19,11 +19,11 @@ public class ItemCanvas extends Item{
 		setCreativeTab(CreativeTabs.tabDecorations);
 		setUnlocalizedName("itemCanvas");
 	}
-	
 	@Override
-	public void updateIcons(IconRegister par1IconRegister)
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("painting");
+        this.itemIcon = par1IconRegister.registerIcon("painting");
     }
 
 	@SideOnly(Side.CLIENT)

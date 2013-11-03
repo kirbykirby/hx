@@ -1,12 +1,10 @@
 package hx.utils;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.TreeMap;
 
 import org.objectweb.asm.ClassReader;
@@ -21,10 +19,7 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
-import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.relauncher.IClassTransformer;
-
-public abstract class MethodInjectorTransformer implements IClassTransformer
+public abstract class MethodInjectorTransformer implements net.minecraft.launchwrapper.IClassTransformer
 {
     //injected class
     //injected method

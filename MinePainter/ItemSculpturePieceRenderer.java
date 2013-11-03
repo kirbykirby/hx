@@ -1,21 +1,17 @@
 package hx.MinePainter;
 
-import org.lwjgl.opengl.GL11;
-
-import hx.utils.Debug;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.RenderEngine;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.Entity;
+import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.ForgeHooksClient;
 import net.minecraftforge.client.IItemRenderer;
+
+import org.lwjgl.opengl.GL11;
 
 public class ItemSculpturePieceRenderer implements IItemRenderer {
 	private static RenderItem renderItem = new RenderItem();
@@ -60,8 +56,8 @@ public class ItemSculpturePieceRenderer implements IItemRenderer {
 		{
 			EntityItem eis = (EntityItem)data[1];
 			GL11.glScalef(.5f,.5f,.5f);
-			RenderEngine re = RenderManager.instance.renderEngine; 
-			re.bindTexture("/terrain.png");
+			TextureManager re = RenderManager.instance.renderEngine; 
+			re.func_110577_a(re.func_130087_a(0));
 			rb.renderBlockAsItem(BlockSculpture.instance, id, 1);
 
 		}else

@@ -4,6 +4,9 @@ import hx.utils.Debug;
 
 import java.util.List;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,9 +29,11 @@ public class ItemPalette extends Item{
 		instance = this;
 	}
 
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("MinePainter:palette");
+        this.itemIcon = par1IconRegister.registerIcon("MinePainter:palette");
         
         for(int i = 0;i<6;i++)colors[i] = par1IconRegister.registerIcon("MinePainter:palette" + i);
     }
@@ -45,7 +50,7 @@ public class ItemPalette extends Item{
 	
 	public Icon getIcon(ItemStack is, int renderPass)
 	{
-		if(renderPass == 0)return iconIndex;
+		if(renderPass == 0)return itemIcon;
 		return colors[renderPass - 1];
 	}
 	

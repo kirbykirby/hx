@@ -62,7 +62,7 @@ public class EventHandlerClient {
 						pos[5]/8f);
 
 			sculpture.onSelect = true;
-			event.context.drawSelectionBox(event.player, event.target, 0, null, event.partialTicks);
+			event.context.drawSelectionBox(event.player, event.target, 0, event.partialTicks);
 			sculpture.onSelect = false;
 			
 		}else if(pos != null)
@@ -83,7 +83,7 @@ public class EventHandlerClient {
 					pos[4]/8f,
 					pos[5]/8f);
 			
-			event.context.drawSelectionBox(event.player, event.target, 0, null, event.partialTicks);
+			event.context.drawSelectionBox(event.player, event.target, 0, event.partialTicks);
 			
 			Block.blocksList[blockID].setBlockBounds(
 					(float)bounds[0],(float)bounds[1],(float)bounds[2],

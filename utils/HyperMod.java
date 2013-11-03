@@ -151,8 +151,8 @@ public class HyperMod
     	{
     		il.registerRenderer();
     	}
-    	if(MAIN_TEXTURE != null)
-    		MinecraftForgeClient.preloadTexture(this.MAIN_TEXTURE);
+    //	if(MAIN_TEXTURE != null)
+    	//	MinecraftForgeClient.preloadTexture(this.MAIN_TEXTURE);
     }
 
     public void registerRendering(Object proxy)

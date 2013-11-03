@@ -23,7 +23,9 @@ public class ItemEmblem extends Item{
 		setMaxStackSize(1);
 	}
 	
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
         bg = par1IconRegister.registerIcon("MinePainter:emblem_bg");
         shadow = par1IconRegister.registerIcon("MinePainter:emblem_shadow");
@@ -43,8 +45,8 @@ public class ItemEmblem extends Item{
 	
 	public void setBg(boolean isShadow)
 	{
-		if(isShadow)iconIndex = shadow;
-		else iconIndex = bg;
+		if(isShadow)itemIcon = shadow;
+		else itemIcon = bg;
 	}
 	
 	

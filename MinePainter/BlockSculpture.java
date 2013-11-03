@@ -49,8 +49,8 @@ public class BlockSculpture extends BlockContainer{
 
 	public Icon getBlockTextureFromSideAndMetadata(int par1, int par2)
 	{
-		if(renderBlockID == 0)return Block.stone.getBlockTextureFromSideAndMetadata(par1, par2);
-		return Block.blocksList[renderBlockID].getBlockTextureFromSideAndMetadata(par1,par2);
+		if(renderBlockID == 0)return Block.stone.getIcon(par1, par2);
+		return Block.blocksList[renderBlockID].getIcon(par1,par2);
 	}
 
 	public static Block getMaterialBlockAt(IBlockAccess w, int x,int y,int z)

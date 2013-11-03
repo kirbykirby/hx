@@ -16,8 +16,10 @@ public class ItemStoneChisel extends Item{
 		this.setMaxDamage(64);
 	}
 	
-	public void updateIcons(IconRegister par1IconRegister)
+	@Override
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister par1IconRegister)
     {
-        this.iconIndex = par1IconRegister.registerIcon("MinePainter:stone_chisel");
+        this.itemIcon = par1IconRegister.registerIcon("MinePainter:stone_chisel");
     }
 }
